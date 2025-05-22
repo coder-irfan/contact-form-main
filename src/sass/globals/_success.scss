@@ -1,0 +1,41 @@
+.success {
+    position: fixed;
+    top: rem(24);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $grey-900;
+    font-family: $primary-family;
+    padding: rem(24);
+    border-radius: rem(10);
+    color: $white;
+    animation: slideDown 0.4s ease-out;
+
+    &__header {
+        font-size: rem(19);
+        display: flex;
+
+        &::before {
+            content: url('/public/assets/images/icon-success-check.svg');
+            margin-right: rem(10);
+        }
+    }
+
+    &__text {
+        margin-top: rem(10);
+        font-weight: $weight-400;
+        font-size: rem(14);
+        color: $white;
+
+        @include breakpoint("md") {
+            font-size: $font-size;
+        }
+    }
+}
+
+.success.hide {
+  display: none;
+}
+
+.success.show {
+  display: block;
+}
